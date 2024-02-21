@@ -5,6 +5,7 @@
   import TheMainRoom from './TheMainRoom.vue';
   import TheLifeCubeRoom from './TheLifeCubeRoom.vue';
   import ThePhysicRoom from './ThePhysicRoom.vue';
+  import TheOceanRoom from './TheOceanRoom.vue';
 
   defineProps({
     scale: Number,
@@ -30,6 +31,7 @@
       useDefaultScene: false;
       wasmUrl: lib/physx.release.wasm;
     "
+    fog="color:  #a3d0ed;  near:  30;  far:  60;  density:  0"
   >
 
     <a-assets @loaded="allAssetsLoaded = true">
@@ -47,16 +49,19 @@
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
       <a-asset-item id="physic-room" src="assets/3d_gallery_for_vr_projects.glb"></a-asset-item>
+      <a-asset-item id="ocean-room"></a-asset-item>
       <a-asset-item id="sound-1" response-type="arraybuffer" src="assets/sound1.mp3" preload="auto"></a-asset-item>
       <img id="room-physic-out-texture" :src="`assets/main-room-from-physic-room.png`">
       <img id="room-gol-out-texture" :src="`assets/main-room-from-gol-room.png`">
       <img id="room-physic-texture" :src="`assets/physicRoom.png`">
+      <img id="room-ocean-texture" :src="`assets/oceanRoom.png`">
     </a-assets>
 
     <template v-if="allAssetsLoaded">
       <TheMainRoom :scale="scale" />
       <TheLifeCubeRoom />
       <ThePhysicRoom />
+      <TheOceanRoom />
     </template>
 
     <TheCameraRig />
