@@ -3,9 +3,6 @@
 
   import TheCameraRig from './TheCameraRig.vue';
   import TheMainRoom from './TheMainRoom.vue';
-  import TheLifeCubeRoom from './TheLifeCubeRoom.vue';
-  import ThePhysicRoom from './ThePhysicRoom.vue';
-  import TheOceanRoom from './TheOceanRoom.vue';
 
   defineProps({
     scale: Number,
@@ -17,6 +14,7 @@
 
 <template>
   <a-scene
+  stats
     background="color: black;"
     :webxr="`
       requiredFeatures: local-floor;
@@ -41,27 +39,23 @@
         Model author: https://sketchfab.com/mvrc.art (Maxim Mavrichev)
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
-      <a-asset-item id="room" src="assets/vr_gallery.glb"></a-asset-item>
+      <a-asset-item id="room" src="assets/gameLevel.glb"></a-asset-item>
+      <a-asset-item id="fence" src="assets/fence.glb"></a-asset-item>
+      <a-asset-item id="golfball" src="assets/golfball.glb"></a-asset-item>
+      <a-asset-item id="golfclub" src="assets/golfclub.glb"></a-asset-item>
+      <a-asset-item id="flag" src="assets/flag.glb"></a-asset-item>
+      <a-asset-item id="lake" src="assets/lake.glb"></a-asset-item>
+      <a-asset-item id="mountain" src="assets/mountain.glb"></a-asset-item>
       <!--
         Title: 3D Gallery for VR projects
         Model source: https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1
         Model author: https://sketchfab.com/tekuto1s (tekuto1s)
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
-      <a-asset-item id="physic-room" src="assets/3d_gallery_for_vr_projects.glb"></a-asset-item>
-      <a-asset-item id="ocean-room"></a-asset-item>
-      <a-asset-item id="sound-1" response-type="arraybuffer" src="assets/sound1.mp3" preload="auto"></a-asset-item>
-      <img id="room-physic-out-texture" :src="`assets/main-room-from-physic-room.png`">
-      <img id="room-gol-out-texture" :src="`assets/main-room-from-gol-room.png`">
-      <img id="room-physic-texture" :src="`assets/physicRoom.png`">
-      <img id="room-ocean-texture" :src="`assets/oceanRoom.png`">
     </a-assets>
 
     <template v-if="allAssetsLoaded">
       <TheMainRoom :scale="scale" />
-      <TheLifeCubeRoom />
-      <ThePhysicRoom />
-      <TheOceanRoom />
     </template>
 
     <TheCameraRig />
