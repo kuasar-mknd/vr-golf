@@ -4,6 +4,7 @@
   import '../aframe/simple-navmesh-constraint.js';
   import '../aframe/blink-controls.js';
   import '../aframe/physx-grab.js';
+  import '../aframe/custom-controls.js';
 </script>
 
 <template>
@@ -52,7 +53,8 @@
 
       <a-entity
         id="hand-right"
-        hand-controls="hand: right"
+        custom-controls="hand: right"
+        scale="0.01 0.01 0.01"
         laser-controls="hand: right"
         raycaster="far: 4; objects: [clickable]; showLine: true;"
         physx-grab

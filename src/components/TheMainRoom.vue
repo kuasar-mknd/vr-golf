@@ -1,6 +1,7 @@
 <script setup>
   import { ref } from 'vue';
   import PortalTeleporter from './PortalTeleporter.vue';
+  
 
   defineProps({
     scale: Number,
@@ -39,7 +40,51 @@
     gltf-model="#mountain"
     position="43 -2 0"
     scale="0.4 0.4 0.4"
-    rotation="0 90 0"></a-entity>
+    rotation="0 90 0">
+  </a-entity>
+  <a-entity
+    gltf-model="#mountain"
+    position="38 0 10"
+    scale="0.4 0.3 0.4"
+    rotation="0 22 0">
+  </a-entity>
+  <a-entity
+    gltf-model="#mountain"
+    position="30 -2 40"
+    scale="0.8 1 0.5"
+    rotation="0 90 0">
+  </a-entity>
+  <a-entity
+    gltf-model="#mountain"
+    position="1 -2 30"
+    scale="0.6 0.5 0.5"
+    rotation="0 70 0">
+  </a-entity>
+  <a-entity
+    gltf-model="#mountain"
+    position="-21 -2 30"
+    scale="0.9 0.4 0.8"
+    rotation="0 10 0">
+  </a-entity>
+  <a-entity
+    gltf-model="#mountain"
+    position="-15 -2 40"
+    scale="0.9 1 0.8"
+    rotation="0 10 0">
+  </a-entity>
+  <a-entity
+    gltf-model="#mountain"
+    position="-15 -2 40"
+    scale="0.9 1 0.8"
+    rotation="0 10 0">
+  </a-entity>
+  <a-entity
+    gltf-model="#mountain"
+    position="-35 -2 25"
+    scale="0.6 0.4 0.4"
+    rotation="0 45 0">
+  </a-entity>
+
 
   <!-- Main room navigation mesh  -->
   <a-entity
