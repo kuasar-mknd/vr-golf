@@ -39,10 +39,9 @@
         Model author: https://sketchfab.com/mvrc.art (Maxim Mavrichev)
         Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
       -->
-      <a-asset-item id="room" src="assets/gameLevel.glb"></a-asset-item>
+      <a-asset-item id="room" src="assets/gameLevel_noFloor.glb"></a-asset-item>
       <a-asset-item id="fence" src="assets/fence.glb"></a-asset-item>
       <a-asset-item id="golfball" src="assets/golfball.glb"></a-asset-item>
-      <a-asset-item id="golfclub" src="assets/golfclub.glb"></a-asset-item>
       <a-asset-item id="flag" src="assets/flag.glb"></a-asset-item>
       <a-asset-item id="lake" src="assets/lake.glb"></a-asset-item>
       <a-asset-item id="mountain" src="assets/mountain.glb"></a-asset-item>

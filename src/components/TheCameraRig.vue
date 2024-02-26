@@ -4,7 +4,6 @@
   import '../aframe/simple-navmesh-constraint.js';
   import '../aframe/blink-controls.js';
   import '../aframe/physx-grab.js';
-  import '../aframe/custom-controls.js';
 </script>
 
 <template>
@@ -53,14 +52,17 @@
 
       <a-entity
         id="hand-right"
-        custom-controls="hand: right"
-        scale="0.01 0.01 0.01"
+        hand-controls="hand: right"
         laser-controls="hand: right"
         raycaster="far: 4; objects: [clickable]; showLine: true;"
         physx-grab
       >
+      <a-entity id="golfClub" gltf-model="url(assets/golfclub.glb)" 
+              position="-0.02 0.030 -1" rotation="-15 0 90" scale="0.01 0.01 0.01">
+    </a-entity>
         <a-sphere id="hand-right-collider"
-          radius="0.02"
+          radius="0.08"
+          position="0 0.05 -0.97"
           visible="false"
           physx-body="type: kinematic; emitCollisionEvents: true">
         </a-sphere>
