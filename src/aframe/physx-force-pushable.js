@@ -43,7 +43,7 @@ AFRAME.registerComponent('physx-force-pushable', {
   schema: {
     target: {type: 'selector', default: '[camera]'},
     event: {type: 'string', default: 'click'},
-    force: { default: 10 }
+    force: { default: 50 }
   },
   init: function () {
 

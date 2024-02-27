@@ -58,7 +58,7 @@
         physx-grab
       >
       <a-entity id="golfClub" gltf-model="url(assets/golfclub.glb)" 
-              position="-0.02 0.030 -1" rotation="-15 0 90" scale="0.01 0.01 0.01">
+              position="-0.02 0.030 -1" rotation="-15 0 90" scale="0.012 0.012 0.012">
     </a-entity>
         <a-sphere id="hand-right-collider"
           radius="0.08"

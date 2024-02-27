@@ -45,6 +45,9 @@
       <a-asset-item id="flag" src="assets/flag.glb"></a-asset-item>
       <a-asset-item id="lake" src="assets/lake.glb"></a-asset-item>
       <a-asset-item id="mountain" src="assets/mountain.glb"></a-asset-item>
+      <a-asset-item id="rock" src="assets/gameLevel_grass.glb"></a-asset-item>
+      
+      <img id="room-texture" :src="`assets/gameLevel.jpg`">
       <!--
         Title: 3D Gallery for VR projects
         Model source: https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1
