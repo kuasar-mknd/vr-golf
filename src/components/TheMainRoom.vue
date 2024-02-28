@@ -3,6 +3,7 @@
   import PortalTeleporter from './PortalTeleporter.vue';
   import '../aframe/physx-force-pushable.js';
   import '../aframe/clickable.js';
+  import '../aframe/follow-ball.js';
   
 
   defineProps({
@@ -11,6 +12,7 @@
 </script>
 
 <template>
+  <a-light type="directional" light="castShadow: true" position="1 12.07439 1" intensity="0.5" shadow-camera-automatic="#objects"></a-light>
   <a-sphere
     position="0 0.05 -1"
     id="golfball"
@@ -22,6 +24,15 @@
     physx-force-pushable
     clickable
   ></a-sphere>
+  <a-entity id="ball-following-camera"
+          secondary-camera="output: plane; outputElement: #camera-view-plane; cameraType: perspective; sequence: after; quality: high"
+          follow-and-look-at="target: #golfball">
+</a-entity>
+<a-plane id="camera-view-plane-temp"
+         position="1 2 -4" rotation="0 0 0"
+         width="2" height="1.2" >
+</a-plane>
+
   <a-entity
   position="-30 0 -5"
   rotation="0 -100 0"
@@ -36,7 +47,7 @@
   </a-entity>
   <a-sky color="#87CEEB"></a-sky>
     <a-entity light="type:  ambient;  color:  #445451"></a-entity>
-    <a-light type="directional" light="castShadow:true;" position="1 1 1" intensity="0.5" shadow-camera-automatic="#objects"></a-light>
+    
     <a-entity
     geometry="primitive: plane; height: 100; width: 100"
     position="0 0 0"
@@ -44,77 +55,38 @@
     material="src: #room-texture; repeat: 4 4; metalness: 0; roughness: 2;"></a-entity>
 
 
-  <a-entity
-    gltf-model="#flag"
-    position="32 1.8 0"
-    scale="1 1 1"
-    rotation="0 90 0"></a-entity>
-    <a-cylinder position="32.01174 0 -0.32111" radius="0.5" height="2" color="#09F" opacity="0.25" transparent="true" side="double" material="" geometry="radius: 0.14; height: 0.32"></a-cylinder>
-  <a-entity
-    gltf-model="#mountain"
-    position="43 -2 0"
-    scale="0.4 0.4 0.4"
-    rotation="0 90 0">
+  <a-entity gltf-model="#flag" position="32 1.8 0" scale="1 1 1" rotation="0 90 0" animation-mixer></a-entity>
+  <a-cylinder position="32.01174 0 -0.32111" radius="0.5" height="0.02" color="black" opacity="" transparent="" side="" material=""></a-cylinder>
+  <a-cylinder position="32.01174 0 -0.32111" radius="0.5" height="1" color="#09F" opacity="0.25" transparent="true" side="double" material=""></a-cylinder>
+  
+  <!--mountains-->
+  <a-entity id="mountains">
+    <a-entity gltf-model="#mountain" position="43 -2 0" scale="0.4 0.4 0.4" rotation="0 90 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="38 0 10" scale="0.4 0.3 0.4" rotation="0 22 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="30 -2 40" scale="0.8 1 0.5" rotation="0 90 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="1 -2 30" scale="0.6 0.5 0.5" rotation="0 70 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-21 -2 30" scale="0.9 0.4 0.8" rotation="0 10 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-15 -2 40" scale="0.9 1 0.8" rotation="0 10 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-15 -2 40" scale="0.9 1 0.8" rotation="0 10 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-35 -2 25" scale="0.6 0.4 0.4" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-44.34692 -2 13.44544" scale="0.42 0.21 0.79" rotation="0 160 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-37.04956 -2 2.19091" scale="0.42 0.21 0.79" rotation="0 160 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-37.42349 -2 -20.29397" scale="0.42 0.38 0.79" rotation="0 160 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-44.23114 -2 -5.85161" scale="-0.33 0.6 0.79" rotation="0 160 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-47.6316 -2 -35.67524" scale="-0.33 0.6 0.79" rotation="0 160 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-24.40358 -2 -55.17987" scale="-0.33 0.3 1.17" rotation="0 159.81 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-1.13241 -2 -62.94367" scale="-1.08 0.28 0.71" rotation=""></a-entity>
+    <a-entity gltf-model="#mountain" position="23.31585 -2 -55.17268" scale="-0.68 0.45 0.71" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="24.55946 -2 -28.60163" scale="-0.68 0.23 0.71" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="24.55946 -2 -28.60163" scale="-0.68 0.23 0.71" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="53.29252 -2 -16.51732" scale="-0.68 0.32 0.71" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="38.29876 -2 -31.03128" scale="-0.68 0.7 0.71" rotation="0 45 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-42.57896 -2 19.01519" scale="0.42 0.84 0.79" rotation="0 160 0"></a-entity>
+    <a-entity gltf-model="#mountain" position="-49.45055 -2 24.77556" scale="1.27 0.84 0.94" rotation="0 135.65 0"></a-entity>
   </a-entity>
-  <a-entity
-    gltf-model="#mountain"
-    position="38 0 10"
-    scale="0.4 0.3 0.4"
-    rotation="0 22 0">
-  </a-entity>
-  <a-entity
-    gltf-model="#mountain"
-    position="30 -2 40"
-    scale="0.8 1 0.5"
-    rotation="0 90 0">
-  </a-entity>
-  <a-entity
-    gltf-model="#mountain"
-    position="1 -2 30"
-    scale="0.6 0.5 0.5"
-    rotation="0 70 0">
-  </a-entity>
-  <a-entity
-    gltf-model="#mountain"
-    position="-21 -2 30"
-    scale="0.9 0.4 0.8"
-    rotation="0 10 0">
-  </a-entity>
-  <a-entity
-    gltf-model="#mountain"
-    position="-15 -2 40"
-    scale="0.9 1 0.8"
-    rotation="0 10 0">
-  </a-entity>
-  <a-entity
-    gltf-model="#mountain"
-    position="-15 -2 40"
-    scale="0.9 1 0.8"
-    rotation="0 10 0">
-  </a-entity>
-  <a-entity
-    gltf-model="#mountain"
-    position="-35 -2 25"
-    scale="0.6 0.4 0.4"
-    rotation="0 45 0">
-  </a-entity>
-  <a-entity gltf-model="#mountain" position="-44.34692 -2 13.44544" scale="0.42 0.21 0.79" rotation="0 160 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-37.04956 -2 2.19091" scale="0.42 0.21 0.79" rotation="0 160 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-37.42349 -2 -20.29397" scale="0.42 0.38 0.79" rotation="0 160 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-44.23114 -2 -5.85161" scale="-0.33 0.6 0.79" rotation="0 160 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-47.6316 -2 -35.67524" scale="-0.33 0.6 0.79" rotation="0 160 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-24.40358 -2 -55.17987" scale="-0.33 0.3 1.17" rotation="0 159.81 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-1.13241 -2 -62.94367" scale="-1.08 0.28 0.71" rotation=""></a-entity>
-  <a-entity gltf-model="#mountain" position="23.31585 -2 -55.17268" scale="-0.68 0.45 0.71" rotation="0 45 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="24.55946 -2 -28.60163" scale="-0.68 0.23 0.71" rotation="0 45 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="24.55946 -2 -28.60163" scale="-0.68 0.23 0.71" rotation="0 45 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="53.29252 -2 -16.51732" scale="-0.68 0.32 0.71" rotation="0 45 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="38.29876 -2 -31.03128" scale="-0.68 0.7 0.71" rotation="0 45 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-42.57896 -2 19.01519" scale="0.42 0.84 0.79" rotation="0 160 0"></a-entity>
-  <a-entity gltf-model="#mountain" position="-49.45055 -2 24.77556" scale="1.27 0.84 0.94" rotation="0 135.65 0"></a-entity>
 
   <!-- Main room navigation mesh  -->
-  <a-entity position="0 -0.05 0" visible="false">
+  <a-entity id="roomNav" position="0 -0.05 0" visible="false">
   <a-box
     height="0.1" width="63" depth="5"
     position="13 0 -0.5"
@@ -139,7 +111,7 @@
   </a-entity>
 
   <!-- Main room walls -->
-  <a-entity position="0 0 0" visible="false">
+  <a-entity id="roomWalls" position="0 0 0" visible="false">
     <a-box height="10" width="0.1" depth="18" position="6.88454 0 1.85434" rotation="0 90 0" material="color: blue" physx-material="density: NaN" physx-body="type: static" geometry="depth: 60" grab-options="scalable"></a-box>
     <a-box height="10" width="0.1" depth="18" position="17.81904 0 -2.382" rotation="0 90 0" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="depth: 45" grab-options="scalable"></a-box>
     <a-box height="10" width="0.1" depth="18" position="35.31742 0 -0.2078" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="depth: 5" grab-options="scalable"></a-box>
@@ -152,7 +124,8 @@
     <a-cylinder height="10" radius="0.1" position="-10.58147 3.68361 -28.36573" rotation="0 90 0" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="radius: 5.71" grab-options="scalable"></a-cylinder>
   </a-entity>
 
-  <a-entity scale="0.008 0.008 0.008">
+  <!-- Fences-->
+  <a-entity id="fences" scale="0.008 0.008 0.008">
     <a-entity gltf-model="#fence" position="114.53809 0 219.91601" rotation="0 20 0" physx-material="density: NaN" physx-body="type: static" grab-options="scalable"></a-entity>
     <a-entity gltf-model="#fence" position="374.08736 0 207.75471" rotation="0 -20 0" physx-material="density: NaN" physx-body="type: static" grab-options="scalable"></a-entity>
     <a-entity gltf-model="#fence" position="616.91504 0 217.92065" rotation="0 20 0" physx-material="density: NaN" physx-body="type: static" grab-options="scalable"></a-entity>
@@ -217,6 +190,7 @@
 
 
   </a-entity>
+
 </a-entity>
 
 </template>

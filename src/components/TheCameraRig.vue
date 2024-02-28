@@ -35,6 +35,8 @@
       <a-entity
         id="hand-left"
         hand-controls="hand: left"
+        laser-controls="hand: left"
+        raycaster="far: 4; objects: [clickable]; showLine: true;"
         blink-controls="
           cameraRig: #camera-rig;
           teleportOrigin: #head;
@@ -53,20 +55,23 @@
       <a-entity
         id="hand-right"
         hand-controls="hand: right"
-        laser-controls="hand: right"
-        raycaster="far: 4; objects: [clickable]; showLine: true;"
         physx-grab
       >
       <a-entity id="golfClub" gltf-model="url(assets/golfclub.glb)" 
               position="-0.02 0.030 -1" rotation="-15 0 90" scale="0.012 0.012 0.012">
     </a-entity>
-        <a-sphere id="hand-right-collider"
-          radius="0.08"
-          position="0 0.05 -0.97"
+        <a-box id="hand-right-collider"
+          width="0.1" height="0.2" depth="0.7"
+          position="0 0.03 -0.97"
           visible="false"
           physx-body="type: kinematic; emitCollisionEvents: true">
-        </a-sphere>
+        </a-box>
+        <a-plane id="camera-view-plane"
+         position="0.01 0 0.2" rotation="0 90 -180"
+         width="0.2" height="0.1" >
+</a-plane>
       </a-entity>
 
   </a-entity>
+
 </template>

@@ -41,7 +41,6 @@
       -->
       <a-asset-item id="room" src="assets/gameLevel_noFloor.glb"></a-asset-item>
       <a-asset-item id="fence" src="assets/fence.glb"></a-asset-item>
-      <a-asset-item id="golfball" src="assets/golfball.glb"></a-asset-item>
       <a-asset-item id="flag" src="assets/flag.glb"></a-asset-item>
       <a-asset-item id="lake" src="assets/lake.glb"></a-asset-item>
       <a-asset-item id="mountain" src="assets/mountain.glb"></a-asset-item>
@@ -56,11 +55,11 @@
       -->
     </a-assets>
 
+    <TheCameraRig />
     <template v-if="allAssetsLoaded">
       <TheMainRoom :scale="scale" />
     </template>
 
-    <TheCameraRig />
 
   </a-scene>
 </template>
