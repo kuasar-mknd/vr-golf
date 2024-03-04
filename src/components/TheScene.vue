@@ -46,12 +46,14 @@
       <a-asset-item id="mountain" src="assets/mountain.glb"></a-asset-item>
       <a-asset-item id="rock" src="assets/gameLevel_grass.glb"></a-asset-item>
       <a-asset-item id="firework" src="assets/firework.glb"></a-asset-item>
+      
       <a-asset-item id="sound-ambiant" response-type="arraybuffer" src="assets/ambiant.mp3" preload="auto"></a-asset-item>
       <a-asset-item id="sound-hit" response-type="arraybuffer" src="assets/hit.mp3" preload="auto"></a-asset-item>
       <a-asset-item id="sound-win" response-type="arraybuffer" src="assets/win.mp3" preload="auto"></a-asset-item>
       <a-asset-item id="sound-firework" response-type="arraybuffer" src="assets/firework.mp3" preload="auto"></a-asset-item>
       
       <img id="room-texture" :src="`assets/gameLevel.jpg`">
+      <img id="teleport" :src="`assets/teleport.png`"></img>
       <!--
         Title: 3D Gallery for VR projects
         Model source: https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1

@@ -16,6 +16,7 @@
 <template>
     <a-entity sound="src: #sound-ambiant; autoplay: false; loop: true; positional: false; volume: 0.5" id="ambiantSound"></a-entity>
     
+    
   <a-light type="directional" light="castShadow: true" position="1 12.07439 1" intensity="0.5" shadow-camera-automatic="#objects"></a-light>
   <a-sphere
     position="0 0.05 -1"
@@ -42,13 +43,14 @@
     class="collidable"
     ></a-box>
   <a-entity id="ball-following-camera"
-          secondary-camera="output: plane; outputElement: #camera-view-plane; cameraType: perspective; sequence: after; quality: high"
+          secondary-camera="output: plane; outputElement: #camera-view-plane-temp; cameraType: perspective; sequence: after; quality: high"
           follow-and-look-at="target: #golfball">
 </a-entity>
 <a-plane id="camera-view-plane-temp"
          position="1 2 -4" rotation="0 0 0"
-         width="2" height="1.2" >
+         width="2" height="1.2" ><a-image id="teleporter" src="#teleport" scale="2.8291 0.904" position="0 -1"></a-image>
 </a-plane>
+
 
   <a-entity
   position="-30 0 -5"
