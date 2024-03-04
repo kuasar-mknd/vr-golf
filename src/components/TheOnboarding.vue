@@ -12,6 +12,10 @@
     if (AFRAME.utils.device.checkHeadsetConnected() && !AFRAME.utils.device.isMobile()) {
       document.querySelector('a-scene').enterVR();
     }
+    let ambianceSound = document.querySelector('[sound]');
+    if (ambianceSound.components.sound) {
+      ambianceSound.components.sound.playSound();
+    }
   }
 </script>
 

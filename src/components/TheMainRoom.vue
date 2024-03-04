@@ -4,14 +4,18 @@
   import '../aframe/physx-force-pushable.js';
   import '../aframe/clickable.js';
   import '../aframe/follow-ball.js';
+  import '../aframe/game-check.js';
   
 
   defineProps({
     scale: Number,
   });
+
 </script>
 
 <template>
+    <a-entity sound="src: #sound-ambiant; autoplay: false; loop: true; positional: false; volume: 0.5" id="ambiantSound"></a-entity>
+    
   <a-light type="directional" light="castShadow: true" position="1 12.07439 1" intensity="0.5" shadow-camera-automatic="#objects"></a-light>
   <a-sphere
     position="0 0.05 -1"
@@ -19,11 +23,24 @@
     radius="0.05"
     color="white"
     shadow="cast: true; receive: true"
-    physx-body="type: dynamic; mass: 1; linearDamping: 0.5; angularDamping: 0.5;"
+    physx-body="type: dynamic; mass: 1; linearDamping: 0.5; angularDamping: 0.5; emitCollisionEvents:true"
     physx-material="staticFriction: 1.0; dynamicFriction: 1.0"
     physx-force-pushable
     clickable
+    sound="src: #sound-hit; on: contactbegin"
+    aabb-collider="objects: .collidable"
+    game-check
   ></a-sphere>
+  <a-box
+  id="box"
+    position="0 0 -1"
+    width="10"
+    height="0.1"
+    depth="1"
+    color="red"
+    shadow="cast: true; receive: true"
+    class="collidable"
+    ></a-box>
   <a-entity id="ball-following-camera"
           secondary-camera="output: plane; outputElement: #camera-view-plane; cameraType: perspective; sequence: after; quality: high"
           follow-and-look-at="target: #golfball">
@@ -36,13 +53,16 @@
   <a-entity
   position="-30 0 -5"
   rotation="0 -100 0"
+  
   >
+
   
   <a-entity
     gltf-model="#room"
     rotation="0 90 0"
     position="0 0 0"
     scale="3.5 3.5 3.5"
+    
   >
   </a-entity>
   <a-sky color="#87CEEB"></a-sky>
@@ -55,11 +75,13 @@
     material="src: #room-texture; repeat: 4 4; metalness: 0; roughness: 2;"></a-entity>
 
 
-  <a-entity gltf-model="#flag" position="32 1.8 0" scale="1 1 1" rotation="0 90 0" animation-mixer></a-entity>
-  <a-cylinder position="32.01174 0 -0.32111" radius="0.5" height="0.02" color="black" opacity="" transparent="" side="" material=""></a-cylinder>
+  <a-entity id="flagEntity" gltf-model="#flag" position="32 1.8 0" scale="1 1 1" rotation="0 90 0" animation-mixer></a-entity>
+  <a-cylinder id="flag-zone" class="collidable" position="32.01174 0 -0.32111" radius="0.5" height="0.02" color="black" opacity="" transparent="" side="" material="" ></a-cylinder>
   <a-cylinder position="32.01174 0 -0.32111" radius="0.5" height="1" color="#09F" opacity="0.25" transparent="true" side="double" material=""></a-cylinder>
+  <a-text id="success-text" class="collidable" position="31.99581 2.17976 -0.35794" align="center" visible="false" value="Bravo !" text="side: double; transparent: true" rotation="0 -90 0"></a-text> 
+  <a-entity id="fireworkEntity" gltf-model="#firework" position="32 2 0" scale="0.1 0.1 0.1" rotation="0 90 0" animation-mixer visible="false" sound="src: #sound-firework; loop: true; on: playFireworkSound"></a-entity>
   
-  <!--mountains-->
+  
   <a-entity id="mountains">
     <a-entity gltf-model="#mountain" position="43 -2 0" scale="0.4 0.4 0.4" rotation="0 90 0"></a-entity>
     <a-entity gltf-model="#mountain" position="38 0 10" scale="0.4 0.3 0.4" rotation="0 22 0"></a-entity>
