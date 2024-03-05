@@ -33,12 +33,6 @@
   >
 
     <a-assets @loaded="allAssetsLoaded = true">
-      <!--
-        Title: VR Gallery
-        Model source: https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e
-        Model author: https://sketchfab.com/mvrc.art (Maxim Mavrichev)
-        Model license: CC BY 4.0 ( https://creativecommons.org/licenses/by/4.0/ )
-      -->
       <a-asset-item id="room" src="assets/gameLevel_noFloor.glb"></a-asset-item>
       <a-asset-item id="fence" src="assets/fence.glb"></a-asset-item>
       <a-asset-item id="flag" src="assets/flag.glb"></a-asset-item>

@@ -133,16 +133,16 @@
 
   <!-- Main room walls -->
   <a-entity id="roomWalls" position="0 0 0" visible="false">
-    <a-box height="10" width="0.1" depth="18" position="6.88454 0 1.85434" rotation="0 90 0" material="color: blue" physx-material="density: NaN" physx-body="type: static" geometry="depth: 60" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="17.81904 0 -2.382" rotation="0 90 0" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="depth: 45" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="35.31742 0 -0.2078" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="depth: 5" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="-4.51779 0 -10.66713" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="depth: 16.64" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="4.77477 0 -27.83165" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="4.36503 0 -19.27286" rotation="0 90 0" material="color: blue" physx-material="density: NaN" physx-body="type: static" geometry="" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="-6.67055 0 -35.90512" rotation="0 90 0" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="depth: 25" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="4.77477 0 -27.83165" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="" grab-options="scalable"></a-box>
-    <a-box height="10" width="0.1" depth="18" position="-18.06946 0 -16.77169" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="depth: 40" grab-options="scalable"></a-box>
-    <a-cylinder height="10" radius="0.1" position="-10.58147 3.68361 -28.36573" rotation="0 90 0" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="radius: 5.71" grab-options="scalable"></a-cylinder>
+    <a-box height="40" width="0.1" depth="18" position="6.88454 0 1.85434" rotation="0 90 0" material="color: blue" physx-material="density: NaN" physx-body="type: static" geometry="depth: 60" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="17.81904 0 -2.382" rotation="0 90 0" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="depth: 45" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="35.31742 0 -0.2078" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="depth: 5" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="-4.51779 0 -10.66713" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="depth: 16.64" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="4.77477 0 -27.83165" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="4.36503 0 -19.27286" rotation="0 90 0" material="color: blue" physx-material="density: NaN" physx-body="type: static" geometry="" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="-6.67055 0 -35.90512" rotation="0 90 0" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="depth: 25" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="4.77477 0 -27.83165" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="" grab-options="scalable"></a-box>
+    <a-box height="40" width="0.1" depth="18" position="-18.06946 0 -16.77169" material="color: green" physx-material="density: NaN" physx-body="type: static" geometry="depth: 40" grab-options="scalable"></a-box>
+    <a-cylinder height="40" radius="0.1" position="-10.58147 3.68361 -28.36573" rotation="0 90 0" material="color: red" physx-material="density: NaN" physx-body="type: static" geometry="radius: 5.71" grab-options="scalable"></a-cylinder>
   </a-entity>
 
   <!-- Fences-->
