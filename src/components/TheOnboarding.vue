@@ -60,6 +60,18 @@
           </dd>
 
           <dt>
+            <a href="https://github.com/supermedium/superframe/tree/master/components/aabb-collider/" target="_blank">superframe aabb-collider</a>
+          </dt><dd>
+            <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
+          </dd>
+
+          <dt>
+            <a href="https://github.com/diarmidmackenzie/aframe-multi-camera" target="_blank">aframe-multi-camera</a>
+          </dt><dd>
+            <a href="https://github.com/c-frame/aframe-extras/blob/master/LICENSE" target="_blank">MIT License</a>
+          </dd>
+
+          <dt>
             <a href="https://github.com/jure/aframe-blink-controls/" target="_blank">aframe-blink-controls</a>
           </dt><dd>
             <a href="https://github.com/jure/aframe-blink-controls/blob/main/LICENSE" target="_blank">MIT License</a>
@@ -72,17 +84,67 @@
           </dd>
 
           <dt>
-            <a href="https://sketchfab.com/3d-models/vr-gallery-1ac32ed62fdf424498acc146fad31f7e" target="_blank">VR Gallery</a>
+            <a href="https://sketchfab.com/3d-models/firework-61d188cefc7a46f6bfb58a8eadaadb16" target="_blank">Firework</a>
           </dt><dd>
-            by <a href="https://sketchfab.com/mvrc.art" target="_blank">Maxim Mavrichev</a>
+            by <a href="https://sketchfab.com/shikoooooooo" target="_blank">Shikoooooooo</a>
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
           </dd>
 
           <dt>
-            <a href="https://sketchfab.com/3d-models/3d-gallery-for-vr-projects-68f77ed8558c4bd59e0a13e2cc9d1fd1" target="_blank">Physic room model</a>
+            <a href="https://sketchfab.com/3d-models/game-level-scene-low-poly-78ff510e42184ef4866a84998b5aa157" target="_blank">Game Level Scene Low Poly</a>
           </dt><dd>
-            by <a href="https://sketchfab.com/tekuto1s" target="_blank">tekuto1s</a>
+            by <a href="https://sketchfab.com/Karthiknaidu97" target="_blank">Karthiknaidu97</a>
             under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+          
+          <dt>
+            <a href="https://sketchfab.com/3d-models/low-poly-golf-flag-animated-a6ebddcfff9a4c8a912551530ebfdb45" target="_blank">Low poly Golf Flag Animated</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/prorookie123" target="_blank">prorookie123</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+          
+          <dt>
+            <a href="https://sketchfab.com/3d-models/fence-low-poly-9ebef509b23c4031a7305caf822834f2" target="_blank">Fence - Low poly</a>
+          </dt><dd>
+            by <a href="https://sketchfab.com/lightguard" target="_blank">lightguard</a>
+            under <a href="https://creativecommons.org/licenses/by/4.0/" target="_blank">CC BY 4.0</a>
+          </dd>
+
+          
+          <dt>
+            <a href="https://free3d.com/3d-model/golf-club-putter-v01-sg--271408.html" target="_blank">Golf Club Putter v01 SG</a>
+          </dt><dd>
+            by <a href="https://free3d.com/user/printable_models" target="_blank">printable_models</a>
+            under Licence d'utilisation personnelle
+          </dd>
+
+          <dt>
+            <a href="https://freesound.org/people/AlonnaAllen/sounds/345695/" target="_blank">Vocal Ambience</a>
+          </dt><dd>
+            by <a href="https://freesound.org/people/AlonnaAllen/" target="_blank">AlonnaAllen</a>
+            under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Deed </a>
+          </dd>
+          
+          <dt>
+            <a href="https://freesound.org/people/MilanKovanda/sounds/500811/" target="_blank">Fireworks</a>
+          </dt><dd>
+            by <a href="https://freesound.org/people/MilanKovanda/" target="_blank">MilanKovanda</a>
+            under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Deed </a>
+          </dd>
+          
+          <dt>
+            <a href="https://freesound.org/people/kvgarlic/sounds/486552/" target="_blank">late Summer Forest September 28th 2019.WAV</a>
+          </dt><dd>
+            by <a href="https://freesound.org/people/kvgarlic/" target="_blank">kvgarlic</a>
+            under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Deed </a>
+          </dd>
+
+          <dt>
+            <a href="https://freesound.org/people/kvgarlic/sounds/486552/" target="_blank">Hit 2.wav</a>
+          </dt><dd>
+            by <a href="https://freesound.org/people/goldenpotatobull/" target="_blank">goldenpotatobull</a>
+            under <a href="https://creativecommons.org/publicdomain/zero/1.0/" target="_blank">CC0 1.0 Deed </a>
           </dd>
         </dl>
       </div>

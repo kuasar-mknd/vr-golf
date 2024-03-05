@@ -6,11 +6,9 @@ AFRAME.registerComponent('teleport-camera-rig', {
     rig: {type: 'selector', default: '#camera-rig'},
     camera: {type: 'selector', default: '[camera]'},
     on: {type: 'string', default: 'click'},
-    x: {type: 'number', default: 0},
-    y: {type: 'number', default: 0},
-    z: {type: 'number', default: 0},
     handleRotation: {type: 'boolean', default: true},
-    rot: {type: 'number', default: 0}, // rotation in degrees
+    rot: {type: 'number', default: 0},
+    target: {type: 'selector'}, // rotation in degrees
   },
 
   init: function () {
@@ -19,13 +17,11 @@ AFRAME.registerComponent('teleport-camera-rig', {
   },
 
   onEvent: function () {
-    // Put the rig at the specified position
-    this.data.rig.object3D.position.x = this.data.x;
-    this.data.rig.object3D.position.y = this.data.y;
-    this.data.rig.object3D.position.z = this.data.z;
-    // Put the camera at the centre of the rig
-    this.data.camera.object3D.position.x = 0;
-    this.data.camera.object3D.position.z = 0;
+    const targetPosition = this.data.target.object3D.position; // Récupère la position de la balle
+
+    // Met à jour la position du rig de la caméra
+    this.data.rig.object3D.position.set((targetPosition.x), targetPosition.y, targetPosition.z-0.5);
+
     // Rotate the rig if needed
     if (this.data.handleRotation) {
       // Take the camera quaternion

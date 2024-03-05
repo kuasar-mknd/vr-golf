@@ -1,13 +1,13 @@
 <script setup>
   import { ref } from 'vue';
-  import PortalTeleporter from './PortalTeleporter.vue';
   import '../aframe/physx-force-pushable.js';
   import '../aframe/clickable.js';
   import '../aframe/follow-ball.js';
   import '../aframe/game-check.js';
+  import '../aframe/teleport-camera-rig.js';
   
 
-  defineProps({
+  const props = defineProps({
     scale: Number,
   });
 
@@ -32,23 +32,20 @@
     aabb-collider="objects: .collidable"
     game-check
   ></a-sphere>
-  <a-box
-  id="box"
-    position="0 0 -1"
-    width="10"
-    height="0.1"
-    depth="1"
-    color="red"
-    shadow="cast: true; receive: true"
-    class="collidable"
-    ></a-box>
   <a-entity id="ball-following-camera"
-          secondary-camera="output: plane; outputElement: #camera-view-plane-temp; cameraType: perspective; sequence: after; quality: high"
+          secondary-camera="output: plane; outputElement: #camera-view-plane; cameraType: perspective; sequence: after; quality: high"
           follow-and-look-at="target: #golfball">
 </a-entity>
-<a-plane id="camera-view-plane-temp"
+<a-plane id="camera-view-plane-temp" visible="false"
          position="1 2 -4" rotation="0 0 0"
-         width="2" height="1.2" ><a-image id="teleporter" src="#teleport" scale="2.8291 0.904" position="0 -1"></a-image>
+         width="2" height="1.2" >
+         <a-image id="teleporter" src="#teleport" 
+         scale="2.8291 0.904" 
+         position="0 -1" 
+         clickable
+         :teleport-camera-rig="`
+          target: #golfball;
+        `"></a-image>
 </a-plane>
 
 

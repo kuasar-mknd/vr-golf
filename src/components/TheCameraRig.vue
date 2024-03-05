@@ -37,12 +37,6 @@
         hand-controls="hand: left"
         laser-controls="hand: left"
         raycaster="far: 4; objects: [clickable]; showLine: true;"
-        blink-controls="
-          cameraRig: #camera-rig;
-          teleportOrigin: #head;
-          collisionEntities: [data-role='nav-mesh'];
-          snapTurn: false;
-        "
         physx-grab
       >
         <a-sphere id="hand-left-collider"
@@ -69,6 +63,13 @@
         <a-plane id="camera-view-plane"
          position="0.01 0 0.2" rotation="0 90 -180"
          width="0.2" height="0.1" >
+         <a-entity scale="0.07 0.07 0.07"><a-image id="teleporter" src="#teleport" 
+         scale="2.8291 0.904" 
+         position="0 -1.1" 
+         clickable
+         :teleport-camera-rig="`
+          target: #golfball;
+        `"></a-image></a-entity>
 </a-plane>
       </a-entity>
 
