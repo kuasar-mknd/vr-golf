@@ -27,6 +27,17 @@
       <button v-if="loaded" @click="enterScene()">Enter scene</button>
       <div class="licences">
       <section>
+        <div id="how-to-play">
+  <h2>Comment Jouer</h2>
+  <p>Bienvenue dans mon expérience de golf en réalité virtuelle ! Voici comment jouer :</p>
+  <ol>
+    <li><strong>Utilisez le club de golf :</strong> Utilisez votre <em>main droite</em> pour frapper la balle. Ajustez votre prise et l'angle pour obtenir le meilleur coup possible.</li>
+    <li><strong>Surveillez la balle :</strong> Sur votre <em>main droite</em>, vous trouverez également une caméra qui vous permet de suivre le parcours de la balle après l'avoir frappée. Cela vous aide à voir où elle atterrit et à planifier votre prochain coup.</li>
+    <li><strong>Se téléporter :</strong> Utilisez votre <em>main gauche</em> pour vous pointer vers le bouton de téléportation. Cela vous permettra de vous déplacer sur le terrain de golf et de vous positionner pour votre prochain coup.</li>
+  </ol>
+  <p>Amusez-vous bien et que le meilleur golfeur gagne !</p>
+</div>
+
         <h4>Movement modes support</h4>
         <ul>
           <li>
