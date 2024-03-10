@@ -37,6 +37,12 @@
         hand-controls="hand: left"
         laser-controls="hand: left"
         raycaster="far: 4; objects: [clickable]; showLine: true;"
+        blink-controls="
+          cameraRig: #camera-rig;
+          teleportOrigin: #head;
+          collisionEntities: [data-role='nav-mesh'];
+          snapTurn: false;
+        "
         physx-grab
       >
         <a-sphere id="hand-left-collider"
